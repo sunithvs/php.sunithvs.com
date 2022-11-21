@@ -7,6 +7,7 @@
 /* CAROUSEL CSS */
 .carousel {
     position: relative;
+
 }
 
 .carousel::after {
@@ -23,8 +24,7 @@
 .carousel ul {
     overflow: auto;
     display: flex;
-    height: 500px;
-    max-height: 500px;
+    height: 100vh;
     scroll-snap-type: x mandatory;
     scroll-snap-points-y: repeat(100%);
     scroll-snap-align: left;
@@ -46,7 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: #000000;
     font-weight: bold;
     font-size: 25px;
     text-align: center;
@@ -98,7 +98,7 @@
     text-decoration: none;
     border-radius: 4px;
     margin-top: 17px;
-    background: black;
+    background: #1aff00;
 }
 
 .carousel ol {
@@ -125,7 +125,7 @@
     border-radius: 100%;
 }
 
-.carousel ol li.selected button {
+.carousel ol li.selected {
     background: white;
 }
 
@@ -163,4 +163,22 @@ p, h2 {
 
 h2 {
     margin-top: 30px;
+}
+
+/*create good looking button*/
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #f44336; /* Red */
 }
