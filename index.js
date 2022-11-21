@@ -126,6 +126,6 @@ function debounce(fn) {
     };
 }
 
-function redirect(name) {
-    window.location.href = `https://php.rohittp.com/${name}`;
+function alert_hi() {
+    alert("why should you delete someone's website ?");
 }

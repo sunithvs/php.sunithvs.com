@@ -11,7 +11,7 @@
     <script src="index.js"></script>
 </head>
 <body>
-<div class="carousel" >
+<div class="carousel">
     <ul tabindex="0">
         <?php
         $path = '/home/user/Personal-Home-Page/src';
@@ -22,7 +22,13 @@
 //            echo ' <li id="c1_slide1" class="selected"><div><div style="background-image: url(https://random.imagecdn.app/500/200);" ></div>' . $files[0] . '<br /><a href="https://www.google.com">Delete</a></div></li>';
             $i = 2;
             foreach (array_splice($files, 1) as $file) {
-                echo '<li id="c1_slide' . $i . '"><div><div style="background-image: url(https://random.imagecdn.app/500/200);"></div>' . explode(".php", $file)[0] . '<br /><a  href="https://php.rohittp.com/' . $file . '" target="">View</a><button class="delete" onclick="console.log(' . $i . ')}">Delete</button></div></li>';
+                echo '<li id="c1_slide' . $i . '"><div>
+                       <div style="background-image: url(https://random.imagecdn.app/500/200);">              
+                            </div>' . explode(".php", $file)[0] . '<br />
+                            <a  href="https://php.rohittp.com/' . $file . '" target="">View</a>
+                            <button class="delete" onclick="alert_hi()">Delete</button>
+                            </div>
+                        </li>';
                 $i++;
             }
         }
