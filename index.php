@@ -9,9 +9,34 @@
     <!--    import styles-->
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
+<div class="alertbutton">
+    <div id="error-0" class="window window--active" role="alertdialog" aria-modal="true" aria-labelledby="error-label-0"
+         aria-describedby="error-desc-0" data-window hidden>
+        <div class="window__header" data-header>
+            <div id="error-label-0" class="window__title" data-label>Error</div>
+            <button class="window__button alertbutton" type="button" disabled>
+                <span class="window__sprite window__sprite--close-disabled"></span>
+                <span class="window__sr">Close</span>
+            </button>
+        </div>
+        <div class="window__body">
+            <img class="window__body-icon" alt="White X on a red circle with dark red outline and drop shadow"
+                 src="https://assets.codepen.io/416221/win95_error_icon.png" width="32" height="32">
+            <p id="error-desc-0" class="window__body-text" data-desc></p>
+        </div>
+        <div class="window__footer">
+            <button class="window__button window__button--lg alertbutton" type="button" data-ok>OK</button>
+        </div>
+    </div>
+</div>
 <div class="carousel">
+
+    <div class="hoge"><h1>This is a website for listing the php websites hosted <a
+                    href="https://php.rohittp.com">here</a>
+        </h1></div>
     <ul tabindex="0">
         <?php
         $path = '/home/user/Personal-Home-Page/src';
@@ -19,12 +44,10 @@
         $files = array_diff(scandir($path), array('.', '..'));
         //        check files is empty
         if (!empty($files)) {
-//            echo ' <li id="c1_slide1" class="selected"><div><div style="background-image: url(https://random.imagecdn.app/500/200);" ></div>' . $files[0] . '<br /><a href="https://www.google.com">Delete</a></div></li>';
             $i = 2;
             foreach (array_splice($files, 1) as $file) {
                 echo '<li id="c1_slide' . $i . '"><div>
-                       <div style="background-image: url(https://random.imagecdn.app/500/200);">              
-                            </div>' . explode(".php", $file)[0] . '<br />
+                       <iframe src="https://php.rohittp.com/' . $file . '" title="' . $file . '"  width="150" ></iframe></br>' . explode(".php", $file)[0] . '<br />
                             <a  href="https://php.rohittp.com/' . $file . '" target="">View</a>
                             <button class="delete" onclick="alert_hi()">Delete</button>
                             </div>
