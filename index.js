@@ -9,10 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const slides = carousel.querySelectorAll('ul li');
         const nextarrow = carousel.querySelector('.next');
         const prevarrow = carousel.querySelector('.prev');
+        const iframe = carousel.querySelector('iframe');
 
         // Initialize the carousel
         nextarrow.style.display = 'block';
         prevarrow.style.display = 'block';
+        iframe.style.display = "block";
+
         ele.scrollLeft = 0;
         bullets[0].classList.add('selected');
         slides[0].classList.add('selected');
@@ -332,21 +335,15 @@ class Windows95Error {
 
     get errorMessage() {
         const errorList = [
-            "A fatal error has occurred.",
-            "Access is denied.",
-            "An error occurred while displaying the previous error.",
-            "Application performed an illegal action.",
-            "Click OK to fix the error.",
-            "Critical error",
-            "Nope.",
-            "Something terrible happened.",
-            "Sorry. No can do.",
-            "That action is out of order.",
-            "The operation completed successfully.",
-            "The operation failed badly.",
-            "This is illegal you know.",
-            "Unknown error",
-            "You don’t have permission to do that. Contact an administrator if you want it."
+            "Everything should be well doccumented.",
+            "ohhhhhhh!!!!!!!!!!!!. Look at his attitude.",
+            "okey baaaaaaaaai.",
+            "I'am modernised PPT maker",
+            "angane ano salmane.",
+            "there is no corona. Dont wear mask.",
+            "Ellarum prarthikane",
+            "Technically possible anh",
+
         ];
         return errorList[Utils.randomInt(0, errorList.length - 1)];
     }
@@ -369,6 +366,7 @@ class Windows95Error {
         this.parent.removeChild(this.el);
         this.isClosing = true;
     }
+
     moveBy(x, y) {
         this.x += x;
         this.y += y;

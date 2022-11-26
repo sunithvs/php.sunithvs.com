@@ -10,6 +10,14 @@
 
 }
 
+.iframe-img {
+    display: none;
+}
+
+.iframe-img :focus {
+    display: block;
+}
+
 .carousel::after {
     content: "";
     position: absolute;
@@ -361,7 +369,7 @@ button {
     width: 100%;
     background-color: #808080;
     text-align: center;
-   color: #ffd500;
+    color: #ffd500;
     filter: ;
 
 }

@@ -47,7 +47,7 @@
             $i = 2;
             foreach (array_splice($files, 1) as $file) {
                 echo '<li id="c1_slide' . $i . '"><div>
-                       <iframe src="https://php.rohittp.com/' . $file . '" title="' . $file . '"  width="150" ></iframe></br>' . explode(".php", $file)[0] . '<br />
+                       <iframe style="display: none" src="https://php.rohittp.com/' . $file . '" title="' . $file . '"  width="150" ></iframe></br>' . explode(".php", $file)[0] . '<br />
                             <a  href="https://php.rohittp.com/' . $file . '" target="">View</a>
                             <button class="delete" onclick="alert_hi()">Delete</button>
                             </div>
@@ -73,6 +73,7 @@
             }
         }
         ?>
+
     </ol>
     <div class="prev">&lsaquo;</div>
     <div class="next">&rsaquo;</div>
